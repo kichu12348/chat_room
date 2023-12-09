@@ -56,7 +56,7 @@ export const Chat = (props) => {
       
       
       <div className="ChatRoomName">
-      <h1>Chat: {room}</h1>
+      <h1>Chat Room: {room}</h1>
     </div>
 
     <div className="MessageBox">
