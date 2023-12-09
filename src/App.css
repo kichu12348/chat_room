@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.stylerboi {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.room {
+  margin: 300px 0 30px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center; 
+  justify-content: center; 
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+  background: transparent;
+  backdrop-filter: blur(8px);
+}
+
+.room input {
+  width: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  outline: none;
+}
+
+.room input::placeholder {
   color: white;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.room button {
+  width: 100%;
+  background-color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sign-out{
+  margin: 20px 0px 0px 1400px;
+}
+
+.sign-out button{
+  width: 100px;
+  height: 35px;
+  border: none;
+  outline: none;
+  border-radius:40px ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.RoomNameInput{
+  color: white;
+  font-weight: 500;
 }

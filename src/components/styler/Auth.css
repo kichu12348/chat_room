@@ -1,0 +1,43 @@
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: url(./images/purpleForest.jpg) no-repeat;
+    background-size:1550px 900px;
+}
+
+.auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 300px 600px 0 600px;
+    padding: 30px 0 30px 0;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 12px;
+    justify-content: space-between;
+    background: transparent;
+    backdrop-filter: blur(8px);
+}
+
+.auth p{
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 30px 0;
+
+}
+
+.auth button {
+    width: 85%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius:40px ;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}

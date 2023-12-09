@@ -1,23 +1,60 @@
-import logo from './logo.svg';
+import React, { useState, useRef } from 'react';
 import './App.css';
+import Auth from './components/Auth';
+import Cookies from 'universal-cookie';
+import { Chat } from './components/Chat';
+import { signOut } from 'firebase/auth';
+import { auth } from './firebase-config';
+
+const cookies = new Cookies();
 
 function App() {
+  const authCookie = cookies.get('auth-token');
+  console.log('Auth Cookie:', authCookie);
+
+  const [isAuth, setIsAuth] = useState(authCookie);
+  const [room, setRoom] = useState(null);
+
+  const roomInputRef = useRef(0)
+
+
+  const handleEnterChat = () => {
+    // Your logic to set the room state
+    setRoom(/* your value here */);
+  };
+
+  const signUserOut=async ()=>{
+    await signOut(auth)
+    cookies.remove('auth-token')
+    setIsAuth(false)
+    setRoom(null)
+
+  };
+
+  if (!isAuth) {
+    return (
+      <div>
+        <Auth setIsAuth={setIsAuth} />
+      </div>
+    );
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='stylerboi'>
+      {room ? (
+        <Chat room={room}/>
+      ) : (
+        <div className='room'>
+          
+          <input ref={roomInputRef} placeholder='Enter Chat Name' className='RoomNameInput'/>
+          <button type='button' onClick={()=> setRoom(roomInputRef.current.value)}>
+            Enter Chat
+          </button>
+        </div>
+      )}
+      <div className='sign-out'>
+        <button onClick={signUserOut}>Sign Out</button>
+      </div>
     </div>
   );
 }
