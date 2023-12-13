@@ -2,9 +2,7 @@ body {
     font-family: Arial, sans-serif;
     padding: 0;
     margin: 0;
-    background: url(./images/purpleForest.jpg) no-repeat;
-    background-size:cover;
-    background-position: center;
+    
     border: none;
 }
     

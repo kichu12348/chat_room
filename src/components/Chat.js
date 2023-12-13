@@ -22,17 +22,14 @@ export const Chat = (props) => {
         messages.push({ ...doc.data(), id: doc.id });
       });
       setMessages(messages);
-
-      
+      setNewMessage(''); // Move the setNewMessage inside the callback
     });
 
     return () => unsubscribe();
   }, [room]);
 
-
-  useEffect(()=>{
-    messagesEndRef.current?.scrollIntoView({behavior: 'smooth'});
-
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   const handleSubmit = async (e) => {
@@ -46,10 +43,8 @@ export const Chat = (props) => {
       room,
     });
 
-    setNewMessage('');
+    // Remove the setNewMessage here
   };
-
-  
 
   return (
     <div className="chat-app">
@@ -66,9 +61,8 @@ export const Chat = (props) => {
                 <div className="userMessage">{message.text}</div>
               </div>
             ))}
-           
           </div>
-          <div ref={messagesEndRef}/>
+          <div ref={messagesEndRef} />
         </div>
       </div>
 
@@ -81,7 +75,11 @@ export const Chat = (props) => {
         />
 
         <button type="submit" className="send-button">
-          <img src={require('./styler/images/send.png')} className="send-button-image" alt="send" />
+          <img
+            src={require('./styler/images/send.png')}
+            className="send-button-image"
+            alt="send"
+          />
         </button>
       </form>
     </div>

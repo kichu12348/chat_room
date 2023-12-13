@@ -2,21 +2,23 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-size: cover;
   border: none;
   background-position: center;
   overflow-x: hidden;
   overflow-y: hidden;
+  background: url(./components/styler/images/purpleForest.jpg);
+  background-size:cover;
+  background-position: center;
 }
 
 .stylerboi {
   display: flex;
   align-items: center;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  max-width: 90%;
-  margin: 20% auto;
+  max-width: 95%;
+  margin: 0 30% 50% 37%;
   overflow: hidden;
+  z-index: 3;
+  
 }
 
 .room {
@@ -30,6 +32,9 @@ body {
   padding: 20px;
   background: transparent;
   backdrop-filter: blur(8px);
+  position: fixed;
+  top: 40%;
+  left: 40%;
 }
 
 .room input {
@@ -84,12 +89,14 @@ body {
 
 @media only screen and (max-width: 768px) {
   .stylerboi {
-    margin: 80% auto;
+    margin:0;
   }
 
   .room {
-    margin: 10px 0;
-    padding: 15px;
+    position: fixed;
+    top: 50%;
+    left: 20%;
+
   }
 
   .sign-out {
