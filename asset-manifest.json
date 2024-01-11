@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/chat_room/static/css/main.72bfad2f.css",
+    "main.css": "/chat_room/static/css/main.7c93831b.css",
     "main.js": "/chat_room/static/js/main.a1ab9237.js",
     "static/media/purpleForest.jpg": "/chat_room/static/media/purpleForest.f0b5a26058d30e4b23d3.jpg",
     "static/media/send.png": "/chat_room/static/media/send.9f2fe1fb8e4c02b7fd0e.png",
     "index.html": "/chat_room/index.html",
-    "main.72bfad2f.css.map": "/chat_room/static/css/main.72bfad2f.css.map",
+    "main.7c93831b.css.map": "/chat_room/static/css/main.7c93831b.css.map",
     "main.a1ab9237.js.map": "/chat_room/static/js/main.a1ab9237.js.map"
   },
   "entrypoints": [
-    "static/css/main.72bfad2f.css",
+    "static/css/main.7c93831b.css",
     "static/js/main.a1ab9237.js"
   ]
 }
