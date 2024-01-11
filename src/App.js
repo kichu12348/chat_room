@@ -19,8 +19,8 @@ function App() {
 
 
   const handleEnterChat = () => {
-    // Your logic to set the room state
-    setRoom(/* your value here */);
+    //  logic to set the room state
+    setRoom(/*value here */);
   };
 
   const signUserOut=async ()=>{
